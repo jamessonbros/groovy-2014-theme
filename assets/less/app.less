@@ -1,0 +1,173 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+
+/* ==========================================================================
+   Custom Variables
+   ========================================================================== */
+
+@black: #000;
+@white: #fff;
+@light-blue: #c5f0f8;
+@blue: #1614f4;
+@pink: #f10057;
+@light-green: #d8eb4f;
+@green: #34b459;
+
+/* ==========================================================================
+   Bootstrap Overrides
+   ========================================================================== */
+
+// colors
+@body-bg: @light-blue;
+@text-color: @black;
+@link-color: @blue;
+@link-hover-color: @black;
+@page-header-border-color: none;
+
+// navbar
+@navbar-border-radius: 0;
+// @navbar-margin-bottom: 0;
+@navbar-default-bg: @pink;
+@navbar-default-border: none;
+@navbar-default-color: @white;
+@navbar-default-link-color: @white;
+@navbar-default-link-hover-color: @white;
+@navbar-default-link-hover-bg: @black;
+@navbar-default-link-active-color: @white;
+@navbar-default-link-active-bg: @black;
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+.text-center .img-responsive {
+   margin-left: auto;
+   margin-right: auto;
+}
+img, .wp-caption, embed, object {
+   max-width: 100%;
+}
+
+body { }
+
+h1, h2, h3, h4, h5, h6 {
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner {
+   text-align: center;
+   .logo-container {
+      a {
+         display: inline-block;
+      }
+      img {
+         margin: 0 auto;
+      }
+   }
+}
+
+.navbar-default {
+   border: none 0;
+   .navbar-nav > li {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-transform: uppercase;
+   }
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+.page-header {
+   text-align: center;
+   h1 {
+      font-size: 4em;
+   }
+}
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) {
+   .navbar-default {
+      // Center navbar items
+      // See http://stackoverflow.com/questions/19073813/how-to-center-navbar-nav-element-in-bootstrap-3
+      .navbar-nav {
+         margin: 0 auto;
+         display: table;
+         table-layout: fixed;
+         float: none;
+      }
+   }
+}
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }
