@@ -60,7 +60,9 @@ h1, h2, h3, h4, h5, h6 {
    font-weight: bold;
    text-transform: uppercase;
 }
-
+.lead {
+   font-weight: bold;
+}
 
 /* ==========================================================================
    Header
@@ -96,10 +98,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-header {
    text-align: center;
-   h1 {
-      font-size: 4em;
-   }
 }
+
+
+
+.amount {
+   font-size: 3em;
+   font-weight: bold;
+}
+
+
 
 
 /* ==========================================================================
@@ -170,8 +178,22 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          float: none;
       }
    }
+   h1 {
+      font-size: 4em;
+      line-height: .8em;
+   }
 }
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+   h1 {
+      font-size: 6em;
+      line-height: .8em;
+   }
+}
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+   h1 {
+      font-size: 10em;
+      line-height: .8em;
+   }
+}
