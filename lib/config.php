@@ -57,7 +57,7 @@ function roots_display_sidebar() {
       'is_404',
       'is_front_page',
       'is_woocommerce',
-      'is_blog'
+      'is_page'
     ),
     /**
      * Page template checks (via is_page_template())
