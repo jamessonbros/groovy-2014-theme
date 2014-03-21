@@ -11,10 +11,12 @@
 @black: #000;
 @white: #fff;
 @light-blue: #c5f0f8;
-@blue: #1614f4;
+@medium-blue: #2ecffe;
+@blue: #148caf;
 @pink: #f10057;
 @light-green: #d8eb4f;
 @green: #34b459;
+@neon: #f1f800;
 
 /* ==========================================================================
    Bootstrap Overrides
@@ -32,7 +34,6 @@
 // navbar
 @navbar-border-radius: 0;
 // @navbar-margin-bottom: 0;
-@navbar-default-bg: @pink;
 @navbar-default-border: none;
 @navbar-default-color: @white;
 @navbar-default-link-color: @white;
@@ -40,6 +41,38 @@
 @navbar-default-link-hover-bg: @black;
 @navbar-default-link-active-color: @white;
 @navbar-default-link-active-bg: @black;
+
+@navbar-height: 80px;
+
+
+
+
+
+//** Background for the dropdown menu.
+@dropdown-bg: @black;
+//** Dropdown menu `border-color`.
+@dropdown-border: @black;
+
+//** Dropdown link text color.
+@dropdown-link-color:            @medium-blue;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg: @pink;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @component-active-color;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @component-active-bg;
+
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   @gray-light;
+
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:          @gray-light;
+
+
+
 
 
 /* ==========================================================================
@@ -54,11 +87,14 @@ img, .wp-caption, embed, object {
    max-width: 100%;
 }
 
-body { }
+body {
+   background: @light-blue url(/wp-content/themes/groovy-2014-theme/assets/img/bg.jpg) top center no-repeat;
+}
 
 h1, h2, h3, h4, h5, h6 {
    font-weight: bold;
    text-transform: uppercase;
+   letter-spacing: -.05em;
 }
 .lead {
    font-weight: bold;
@@ -88,6 +124,41 @@ h1, h2, h3, h4, h5, h6 {
       text-transform: uppercase;
    }
 }
+.navbar {
+   margin-bottom: 0;
+   background: @pink url(/wp-content/themes/groovy-2014-theme/assets/img/pinkwood.jpg);
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .dropdown-menu {
+   background: @black url(/wp-content/themes/groovy-2014-theme/assets/img/blackwood.jpg);
+}
+.sub-nav {
+   background: @black url(/wp-content/themes/groovy-2014-theme/assets/img/blackwood.jpg);
+   padding: 12px 0 1px 0;
+}
+.dropdown-menu>li>a {
+   font-size: 1.6em;
+   font-weight: bold;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+   background: @neon url(/wp-content/themes/groovy-2014-theme/assets/img/neonwood.jpg);
+   color: @black;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+   background: @pink url(/wp-content/themes/groovy-2014-theme/assets/img/pinkwood.jpg);
+   color: @white;
+}
+.phone {
+   font-size: 2em;
+   font-weight: bold;
+   margin: 0;
+}
+.phone a {
+   color: @medium-blue;
+   text-decoration: none;
+}
+.dropdown, .navbar, .dropdown-menu {
+   border: 0;
+}
 
 
 /* ==========================================================================
@@ -106,7 +177,9 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 3em;
    font-weight: bold;
 }
-
+.products li, .tabs li {
+   list-style-type: none;
+}
 
 
 
