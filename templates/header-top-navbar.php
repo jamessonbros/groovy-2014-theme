@@ -8,4 +8,4 @@
 <div class="sub-nav text-center">
   <p class="phone"><a href="tel:+18554766895" alt="(855) 476-6895"><span class="glyphicon glyphicon-earphone"></span> (855) GROOVY-5</a></p>
 </div>
-<img src="/wp-content/themes/groovy-2014-theme/assets/img/teeth.png" class="img-responsive teeth">
+<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/teeth.png" class="img-responsive teeth">
