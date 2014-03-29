@@ -168,6 +168,81 @@ h1, h2, h3, h4, h5, h6 {
    list-style-type: none;
 }
 
+// .tab-content {
+//    background: @white url(../img/whitewood.jpg);
+//    padding: 5px 20px 20px 20px;
+// }
+// .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+//    background: @white url(../img/whitewood.jpg);
+// }
+// .nav-tabs>li {
+//    background: @pink url(../img/pinkwood.jpg);
+// }
+// .nav-tabs li a {
+//    color: @white;
+// }
+// .nav-tabs {
+//    margin: 0;
+//    border-bottom: none;
+// }
+
+/**
+ * Nav tabs
+ */
+
+.nav-tabs {
+   margin-top: 3em;
+   border-bottom: none;
+   margin-bottom: -10px;
+}
+.nav-tabs > li > a {
+   border: none 0;
+   font-size: 1.5em;
+   border-radius: 0;
+   margin-left: 0; margin-right: 0;
+   text-transform: uppercase;
+   font-weight: bold;
+}
+.nav-tabs > li {
+   background: @pink url(../img/pinkwood.jpg);
+   color: white;
+   & > a { 
+      color: white;
+      &:hover,
+      &:active,
+      &:focus {
+         background: @white;
+         color: black;
+      }
+   }
+   &.active {
+      a,
+      a:hover,
+      a:focus,
+      a:active {
+      background: @white url(../img/whitewood.jpg);
+         border: none 0;
+         border-radius: 0;
+         color: black;
+      }
+   }
+}
+.tab-pane {
+   background: @white url(../img/whitewood.jpg);
+   color: black;
+   padding: 0.5em 1em;
+
+   a {
+      color: @pink;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      color: @pink;
+      text-shadow: none;
+   }
+}
+
+
+
 /* ==========================================================================
    Primary Content
    ========================================================================== */

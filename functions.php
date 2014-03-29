@@ -23,7 +23,7 @@ function wc_remove_related_products( $args ) {
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
 
-define('WOOCOMMERCE_USE_CSS', false);
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 add_action( 'init', 'jk_remove_wc_breadcrumbs' );
 function jk_remove_wc_breadcrumbs() {
