@@ -168,6 +168,11 @@ h1, h2, h3, h4, h5, h6 {
    list-style-type: none;
 }
 
+.help-phone {
+   font-size: 5em;
+}
+
+
 // .tab-content {
 //    background: @white url(../img/whitewood.jpg);
 //    padding: 5px 20px 20px 20px;
@@ -211,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
       &:hover,
       &:active,
       &:focus {
-         background: @white;
+         background: @neon url(../img/neonwood.jpg);
          color: black;
       }
    }
@@ -233,14 +238,21 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0.5em 1em;
 
    a {
-      color: @pink;
    }
    h1, h2, h3, h4, h5, h6 {
-      color: @pink;
       text-shadow: none;
    }
 }
 
+
+/* ==========================================================================
+   WooCommerce specific
+   ========================================================================== */
+
+.booking_calender, .time-slot {
+   margin-left: 10px;
+}
+.product .sku { display: none !important; }
 
 
 /* ==========================================================================
