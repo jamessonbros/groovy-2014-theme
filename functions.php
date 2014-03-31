@@ -23,14 +23,12 @@ function wc_remove_related_products( $args ) {
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
 
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 add_action( 'init', 'jk_remove_wc_breadcrumbs' );
 function jk_remove_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 
-remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 
 /** 
  * remove on single product panel, "Product Description"
