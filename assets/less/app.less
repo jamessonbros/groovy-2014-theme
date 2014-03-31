@@ -172,6 +172,9 @@ h1, h2, h3, h4, h5, h6 {
    font-size: 5em;
 }
 
+.published {
+   opacity: 0.5;
+}
 
 // .tab-content {
 //    background: @white url(../img/whitewood.jpg);
@@ -237,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 .tab-pane {
    background: @white url(../img/whitewood.jpg);
    color: black;
-   padding: 0.5em 1em;
+   padding: 0.5em 1em 2em 1em;
 
    a {
    }
@@ -251,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
    WooCommerce Tabs
    ========================================================================== */
 
-.entry-content {
+.woocommerce-tabs .entry-content {
    background: @white url(../img/whitewood.jpg);
    color: black;
 }
@@ -276,11 +279,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page div.product .woocommerce-tabs ul.tabs li a {
    text-shadow: none;
-color: @white;
+   color: @white;
+   padding: 10px;
 }
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li {
 -webkit-border-top-left-radius: 0;
 -webkit-border-top-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-bottom-right-radius: 0;
+}
+
+.woocommerce #content div.product .woocommerce-tabs ul.tabs:before, .woocommerce div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page div.product .woocommerce-tabs ul.tabs:before {
+   border: none;
+   left: 0px; 
+}
+
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active, .woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
+   border: none;
+}
+
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li:after, .woocommerce div.product .woocommerce-tabs ul.tabs li:after, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li:after, .woocommerce-page div.product .woocommerce-tabs ul.tabs li:after {
+    right: 0px; 
+    -webkit-border-bottom-left-radius: 0; 
+    -moz-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0; 
+    border-width: 0; 
+    box-shadow: none; 
+}
+
+.woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel {
+   padding: 20px;
+}
+
+.woocommerce div.product div.images img, .woocommerce #content div.product div.images img, .woocommerce-page div.product div.images img, .woocommerce-page #content div.product div.images img {
+    box-shadow: none; 
 }
 
 
@@ -288,7 +320,7 @@ color: @white;
    WooCommerce specific
    ========================================================================== */
 
-.booking_calender, .time-slot {
+.booking_calender, .time_slot {
    margin-left: 10px;
 }
 .product .sku, .product_meta { display: none !important; }

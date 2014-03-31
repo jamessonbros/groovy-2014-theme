@@ -91,3 +91,8 @@ function roots_nav_menu_args($args = '') {
   return array_merge($args, $roots_nav_menu_args);
 }
 add_filter('wp_nav_menu_args', 'roots_nav_menu_args');
+
+function register_my_menu() {
+  register_nav_menu('secondary_navigation',__( 'Secondary Navigation' ));
+}
+add_action( 'init', 'register_my_menu' );
