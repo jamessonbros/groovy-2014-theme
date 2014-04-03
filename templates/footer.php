@@ -23,7 +23,7 @@
   <div class="container text-center">
     <?php dynamic_sidebar('sidebar-footer'); ?>
     <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-    <p><span class="glyphicon glyphicon-heart"></span> <a href="/credits/">Credits</a></p>
+    <p><span class="glyphicon glyphicon-heart"></span> <a href="/credit/">Credits</a></p>
   </div>
 </footer>
 
