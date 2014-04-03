@@ -22,18 +22,15 @@
    Bootstrap Overrides
    ========================================================================== */
 
-@font-family-sans-serif:  "proxima-nova", Helvetica, Arial, sans-serif;
+@font-family-sans-serif: "proxima-nova", Helvetica, Arial, sans-serif;
 
-// colors
 @body-bg: @light-blue;
 @text-color: @black;
 @link-color: @blue;
 @link-hover-color: @black;
 @page-header-border-color: none;
 
-// navbar
 @navbar-border-radius: 0;
-// @navbar-margin-bottom: 0;
 @navbar-default-border: none;
 @navbar-default-color: @white;
 @navbar-default-link-color: @white;
@@ -41,31 +38,17 @@
 @navbar-default-link-hover-bg: @black;
 @navbar-default-link-active-color: @white;
 @navbar-default-link-active-bg: @black;
-
 @navbar-height: 80px;
 
-//** Background for the dropdown menu.
 @dropdown-bg: @black;
-//** Dropdown menu `border-color`.
 @dropdown-border: @black;
-
-//** Dropdown link text color.
-@dropdown-link-color:            @medium-blue;
-//** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
-//** Hover background for dropdown links.
+@dropdown-link-color: @medium-blue;
+@dropdown-link-hover-color: darken(@gray-dark, 5%);
 @dropdown-link-hover-bg: @pink;
-
-//** Active dropdown menu item text color.
-@dropdown-link-active-color:     @component-active-color;
-//** Active dropdown menu item background color.
-@dropdown-link-active-bg:        @component-active-bg;
-
-//** Disabled dropdown menu item background color.
-@dropdown-link-disabled-color:   @gray-light;
-
-//** Text color for headers within dropdown menus.
-@dropdown-header-color:          @gray-light;
+@dropdown-link-active-color: @component-active-color;
+@dropdown-link-active-bg: @component-active-bg;
+@dropdown-link-disabled-color: @gray-light;
+@dropdown-header-color: @gray-light;
 
 /* ==========================================================================
    Base
@@ -78,15 +61,15 @@
 img, .wp-caption, embed, object {
    max-width: 100%;
 }
-
 body {
    background: @light-blue url(../img/bg.jpg) top center no-repeat;
 }
-
 h1, h2, h3, h4, h5, h6 {
    font-weight: bold;
+   letter-spacing: -.04em;
+}
+h1, h2 {
    text-transform: uppercase;
-   letter-spacing: -.05em;
 }
 .lead {
    font-weight: bold;
@@ -106,12 +89,12 @@ h1, h2, h3, h4, h5, h6 {
       }
    }
 }
-
 .navbar-default {
    border: none 0;
    .navbar-nav > li {
       font-weight: bold;
       text-transform: uppercase;
+      font-size: 1.5em;
    }
 }
 .navbar {
@@ -125,6 +108,12 @@ h1, h2, h3, h4, h5, h6 {
    background: @black url(../img/blackwood.jpg);
    padding: 12px 0 1px 0;
 }
+.sub-nav li {
+   display: inline-block;
+}
+.sub-nav li a {
+   text-decoration: none;
+}
 .dropdown-menu>li>a {
    font-size: 1.6em;
    font-weight: bold;
@@ -137,17 +126,22 @@ h1, h2, h3, h4, h5, h6 {
    background: @pink url(../img/pinkwood.jpg);
    color: @white;
 }
-.phone {
-   font-size: 2em;
-   font-weight: bold;
-   margin: 0;
-}
-.phone a {
-   color: @medium-blue;
-   text-decoration: none;
-}
 .dropdown, .navbar, .dropdown-menu {
    border: 0;
+}
+.phone a {
+   font-size: 1.6em;
+   font-weight: bold;
+   color: @medium-blue;
+}
+.cart a {
+   font-size: 1.6em;
+   padding: 0 20px;
+   color: @green;
+}
+.user a {
+   font-size: 1.6em;
+   color: @white;
 }
 
 /* ==========================================================================
@@ -159,7 +153,6 @@ h1, h2, h3, h4, h5, h6 {
 .page-header {
    text-align: center;
 }
-
 .amount {
    font-size: 3em;
    font-weight: bold;
@@ -167,38 +160,22 @@ h1, h2, h3, h4, h5, h6 {
 .products li, .tabs li {
    list-style-type: none;
 }
-
 .help-phone {
-   font-size: 5em;
+   font-size: 3em;
 }
-
 .published {
    opacity: 0.5;
 }
-
-// .tab-content {
-//    background: @white url(../img/whitewood.jpg);
-//    padding: 5px 20px 20px 20px;
-// }
-// .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-//    background: @white url(../img/whitewood.jpg);
-// }
-// .nav-tabs>li {
-//    background: @pink url(../img/pinkwood.jpg);
-// }
-// .nav-tabs li a {
-//    color: @white;
-// }
-// .nav-tabs {
-//    margin: 0;
-//    border-bottom: none;
-// }
-
+.ask {
+   padding: 40px;
+}
+.product-lead {
+   font-size: 6em;
+}
 
 /* ==========================================================================
    Nav Tabs
    ========================================================================== */
-
 
 .nav-tabs {
    margin-top: 3em;
@@ -249,7 +226,6 @@ h1, h2, h3, h4, h5, h6 {
    }
 }
 
-
 /* ==========================================================================
    WooCommerce Tabs
    ========================================================================== */
@@ -262,6 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 .woocommerce-tabs {
    border-radius: 0;
 }
+
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active, .woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
    color: @black;
 }
@@ -282,11 +259,12 @@ h1, h2, h3, h4, h5, h6 {
    color: @white;
    padding: 10px;
 }
+
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li {
--webkit-border-top-left-radius: 0;
--webkit-border-top-right-radius: 0;
--webkit-border-bottom-left-radius: 0;
--webkit-border-bottom-right-radius: 0;
+   -webkit-border-top-left-radius: 0;
+   -webkit-border-top-right-radius: 0;
+   -webkit-border-bottom-left-radius: 0;
+   -webkit-border-bottom-right-radius: 0;
 }
 
 .woocommerce #content div.product .woocommerce-tabs ul.tabs:before, .woocommerce div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page div.product .woocommerce-tabs ul.tabs:before {
@@ -315,7 +293,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none; 
 }
 
-
 /* ==========================================================================
    WooCommerce specific
    ========================================================================== */
@@ -324,7 +301,6 @@ h1, h2, h3, h4, h5, h6 {
    margin-left: 10px;
 }
 .product .sku, .product_meta { display: none !important; }
-
 
 /* ==========================================================================
    Primary Content
@@ -358,7 +334,9 @@ h1, h2, h3, h4, h5, h6 {
 .content-info {
    margin-top: 150px;
 }
-
+.payment-list {
+   padding-bottom: 40px;
+}
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -368,15 +346,6 @@ h1, h2, h3, h4, h5, h6 {
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Roots/Gravity Forms
@@ -428,9 +397,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   .alert();
   .alert-success();
 }
-
-
-
 
 /* ==========================================================================
    Media Queries
