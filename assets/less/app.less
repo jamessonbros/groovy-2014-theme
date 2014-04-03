@@ -103,9 +103,17 @@ h1, h2 {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .dropdown-menu {
    background: @black url(../img/blackwood.jpg);
 }
+.navbar-nav {
+   padding: 0;
+   margin: 0;
+}
 .sub-nav {
    background: @black url(../img/blackwood.jpg);
    padding: 12px 0 1px 0;
+}
+.sub-nav ul {
+   padding: 0;
+   margin: 0;
 }
 .sub-nav li {
    display: inline-block;
@@ -132,10 +140,10 @@ h1, h2 {
    font-size: 1.6em;
    font-weight: bold;
    color: @medium-blue;
+   padding: 0 20px;
 }
 .cart a {
    font-size: 1.6em;
-   padding: 0 20px;
    color: @green;
 }
 .user a {
@@ -336,6 +344,10 @@ h1, h2 {
 .payment-list {
    padding-bottom: 40px;
 }
+.glyphicon-heart {
+   color: red;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
